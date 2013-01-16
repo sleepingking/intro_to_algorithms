@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'Introduction to Algorithm' target in the 'Introduction to Algorithm' project
-//
-
-#ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-#endif

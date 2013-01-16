@@ -7,38 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD8AA52716A68C8C00CF7771 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA52616A68C8B00CF7771 /* Foundation.framework */; };
-		DD8AA52A16A68C8C00CF7771 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA52916A68C8C00CF7771 /* main.m */; };
-		DD8AA52E16A68C8C00CF7771 /* Introduction_to_Algorithm.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD8AA52D16A68C8C00CF7771 /* Introduction_to_Algorithm.1 */; };
+		DD8AA55616A6934B00CF7771 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55516A6934B00CF7771 /* SenTestingKit.framework */; };
+		DD8AA55816A6934B00CF7771 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55716A6934B00CF7771 /* Cocoa.framework */; };
+		DD8AA56216A6934B00CF7771 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD8AA56016A6934B00CF7771 /* InfoPlist.strings */; };
+		DD8AA56516A6934B00CF7771 /* HeapSort_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA56416A6934B00CF7771 /* HeapSort_Test.m */; };
+		DD8AA56A16A6935400CF7771 /* HeapSort.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA54D16A68D2100CF7771 /* HeapSort.m */; };
+		DD8AA56D16A693AE00CF7771 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA56C16A693AE00CF7771 /* Common.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		DD8AA52016A68C8B00CF7771 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-				DD8AA52E16A68C8C00CF7771 /* Introduction_to_Algorithm.1 in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		DD8AA52216A68C8B00CF7771 /* Introduction to Algorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Introduction to Algorithm"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8AA52616A68C8B00CF7771 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DD8AA52916A68C8C00CF7771 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DD8AA52C16A68C8C00CF7771 /* Introduction to Algorithm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Introduction to Algorithm-Prefix.pch"; sourceTree = "<group>"; };
-		DD8AA52D16A68C8C00CF7771 /* Introduction_to_Algorithm.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Introduction_to_Algorithm.1; sourceTree = "<group>"; };
+		DD8AA53F16A68C9F00CF7771 /* Heap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Heap-Prefix.pch"; sourceTree = "<group>"; };
+		DD8AA54016A68C9F00CF7771 /* Heap.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Heap.1; sourceTree = "<group>"; };
+		DD8AA54916A68CE700CF7771 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		DD8AA54A16A68CE700CF7771 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		DD8AA54C16A68D2100CF7771 /* HeapSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapSort.h; sourceTree = "<group>"; };
+		DD8AA54D16A68D2100CF7771 /* HeapSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapSort.m; sourceTree = "<group>"; };
+		DD8AA55416A6934B00CF7771 /* HeapSort_Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeapSort_Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8AA55516A6934B00CF7771 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DD8AA55716A6934B00CF7771 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		DD8AA55A16A6934B00CF7771 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DD8AA55B16A6934B00CF7771 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DD8AA55C16A6934B00CF7771 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD8AA55F16A6934B00CF7771 /* HeapSort_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeapSort_Test-Info.plist"; sourceTree = "<group>"; };
+		DD8AA56116A6934B00CF7771 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD8AA56316A6934B00CF7771 /* HeapSort_Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeapSort_Test.h; sourceTree = "<group>"; };
+		DD8AA56416A6934B00CF7771 /* HeapSort_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeapSort_Test.m; sourceTree = "<group>"; };
+		DD8AA56616A6934B00CF7771 /* HeapSort_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeapSort_Test-Prefix.pch"; sourceTree = "<group>"; };
+		DD8AA56B16A693AE00CF7771 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		DD8AA56C16A693AE00CF7771 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD8AA51F16A68C8B00CF7771 /* Frameworks */ = {
+		DD8AA55016A6934B00CF7771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8AA52716A68C8C00CF7771 /* Foundation.framework in Frameworks */,
+				DD8AA55616A6934B00CF7771 /* SenTestingKit.framework in Frameworks */,
+				DD8AA55816A6934B00CF7771 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,7 +54,9 @@
 		DD8AA51716A68C8B00CF7771 = {
 			isa = PBXGroup;
 			children = (
-				DD8AA52816A68C8C00CF7771 /* Introduction to Algorithm */,
+				DD8AA54816A68CE700CF7771 /* Common */,
+				DD8AA53B16A68C9F00CF7771 /* Heap */,
+				DD8AA55D16A6934B00CF7771 /* HeapSort_Test */,
 				DD8AA52516A68C8B00CF7771 /* Frameworks */,
 				DD8AA52316A68C8B00CF7771 /* Products */,
 			);
@@ -57,7 +65,7 @@
 		DD8AA52316A68C8B00CF7771 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD8AA52216A68C8B00CF7771 /* Introduction to Algorithm */,
+				DD8AA55416A6934B00CF7771 /* HeapSort_Test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,24 +74,69 @@
 			isa = PBXGroup;
 			children = (
 				DD8AA52616A68C8B00CF7771 /* Foundation.framework */,
+				DD8AA55516A6934B00CF7771 /* SenTestingKit.framework */,
+				DD8AA55716A6934B00CF7771 /* Cocoa.framework */,
+				DD8AA55916A6934B00CF7771 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD8AA52816A68C8C00CF7771 /* Introduction to Algorithm */ = {
+		DD8AA53B16A68C9F00CF7771 /* Heap */ = {
 			isa = PBXGroup;
 			children = (
-				DD8AA52916A68C8C00CF7771 /* main.m */,
-				DD8AA52D16A68C8C00CF7771 /* Introduction_to_Algorithm.1 */,
-				DD8AA52B16A68C8C00CF7771 /* Supporting Files */,
+				DD8AA54C16A68D2100CF7771 /* HeapSort.h */,
+				DD8AA54D16A68D2100CF7771 /* HeapSort.m */,
+				DD8AA54016A68C9F00CF7771 /* Heap.1 */,
+				DD8AA53E16A68C9F00CF7771 /* Supporting Files */,
 			);
-			path = "Introduction to Algorithm";
+			path = Heap;
 			sourceTree = "<group>";
 		};
-		DD8AA52B16A68C8C00CF7771 /* Supporting Files */ = {
+		DD8AA53E16A68C9F00CF7771 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DD8AA52C16A68C8C00CF7771 /* Introduction to Algorithm-Prefix.pch */,
+				DD8AA53F16A68C9F00CF7771 /* Heap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD8AA54816A68CE700CF7771 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AA54916A68CE700CF7771 /* Node.h */,
+				DD8AA54A16A68CE700CF7771 /* Node.m */,
+				DD8AA56B16A693AE00CF7771 /* Common.h */,
+				DD8AA56C16A693AE00CF7771 /* Common.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DD8AA55916A6934B00CF7771 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AA55A16A6934B00CF7771 /* AppKit.framework */,
+				DD8AA55B16A6934B00CF7771 /* CoreData.framework */,
+				DD8AA55C16A6934B00CF7771 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DD8AA55D16A6934B00CF7771 /* HeapSort_Test */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AA56316A6934B00CF7771 /* HeapSort_Test.h */,
+				DD8AA56416A6934B00CF7771 /* HeapSort_Test.m */,
+				DD8AA55E16A6934B00CF7771 /* Supporting Files */,
+			);
+			path = HeapSort_Test;
+			sourceTree = "<group>";
+		};
+		DD8AA55E16A6934B00CF7771 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD8AA55F16A6934B00CF7771 /* HeapSort_Test-Info.plist */,
+				DD8AA56016A6934B00CF7771 /* InfoPlist.strings */,
+				DD8AA56616A6934B00CF7771 /* HeapSort_Test-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -91,22 +144,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD8AA52116A68C8B00CF7771 /* Introduction to Algorithm */ = {
+		DD8AA55316A6934B00CF7771 /* HeapSort_Test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD8AA53116A68C8C00CF7771 /* Build configuration list for PBXNativeTarget "Introduction to Algorithm" */;
+			buildConfigurationList = DD8AA56716A6934B00CF7771 /* Build configuration list for PBXNativeTarget "HeapSort_Test" */;
 			buildPhases = (
-				DD8AA51E16A68C8B00CF7771 /* Sources */,
-				DD8AA51F16A68C8B00CF7771 /* Frameworks */,
-				DD8AA52016A68C8B00CF7771 /* CopyFiles */,
+				DD8AA54F16A6934B00CF7771 /* Sources */,
+				DD8AA55016A6934B00CF7771 /* Frameworks */,
+				DD8AA55116A6934B00CF7771 /* Resources */,
+				DD8AA55216A6934B00CF7771 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Introduction to Algorithm";
-			productName = "Introduction to Algorithm";
-			productReference = DD8AA52216A68C8B00CF7771 /* Introduction to Algorithm */;
-			productType = "com.apple.product-type.tool";
+			name = HeapSort_Test;
+			productName = HeapSort_Test;
+			productReference = DD8AA55416A6934B00CF7771 /* HeapSort_Test.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -129,21 +183,61 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD8AA52116A68C8B00CF7771 /* Introduction to Algorithm */,
+				DD8AA55316A6934B00CF7771 /* HeapSort_Test */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DD8AA55116A6934B00CF7771 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD8AA56216A6934B00CF7771 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD8AA55216A6934B00CF7771 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		DD8AA51E16A68C8B00CF7771 /* Sources */ = {
+		DD8AA54F16A6934B00CF7771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8AA52A16A68C8C00CF7771 /* main.m in Sources */,
+				DD8AA56516A6934B00CF7771 /* HeapSort_Test.m in Sources */,
+				DD8AA56A16A6935400CF7771 /* HeapSort.m in Sources */,
+				DD8AA56D16A693AE00CF7771 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DD8AA56016A6934B00CF7771 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD8AA56116A6934B00CF7771 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DD8AA52F16A68C8C00CF7771 /* Debug */ = {
@@ -199,21 +293,29 @@
 			};
 			name = Release;
 		};
-		DD8AA53216A68C8C00CF7771 /* Debug */ = {
+		DD8AA56816A6934B00CF7771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Introduction to Algorithm/Introduction to Algorithm-Prefix.pch";
+				GCC_PREFIX_HEADER = "HeapSort_Test/HeapSort_Test-Prefix.pch";
+				INFOPLIST_FILE = "HeapSort_Test/HeapSort_Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		DD8AA53316A68C8C00CF7771 /* Release */ = {
+		DD8AA56916A6934B00CF7771 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Introduction to Algorithm/Introduction to Algorithm-Prefix.pch";
+				GCC_PREFIX_HEADER = "HeapSort_Test/HeapSort_Test-Prefix.pch";
+				INFOPLIST_FILE = "HeapSort_Test/HeapSort_Test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -229,11 +331,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD8AA53116A68C8C00CF7771 /* Build configuration list for PBXNativeTarget "Introduction to Algorithm" */ = {
+		DD8AA56716A6934B00CF7771 /* Build configuration list for PBXNativeTarget "HeapSort_Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD8AA53216A68C8C00CF7771 /* Debug */,
-				DD8AA53316A68C8C00CF7771 /* Release */,
+				DD8AA56816A6934B00CF7771 /* Debug */,
+				DD8AA56916A6934B00CF7771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
