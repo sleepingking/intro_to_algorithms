@@ -69,7 +69,8 @@ void BuildMaxHeap(NSMutableArray *heap, NSComparator comparator)
 	NSUInteger halfWay = heapSize/2 - 1;
 	for (NSInteger i = halfWay; i >= 0; --i) {
 		MaxHeapify(heap, i, comparator);
-	}}
+	}
+}
 
 void HeapSort(NSMutableArray *heap, NSComparator comparator)
 {
