@@ -13,3 +13,9 @@ void MaxHeapify(NSMutableArray *heap, NSUInteger i, NSComparator comparator);
 void BuildMaxHeap(NSMutableArray *heap, NSComparator comparator);
 
 void HeapSort(NSMutableArray *heap, NSComparator comparator);
+
+id HeapMaximum(NSMutableArray *heap);
+
+id HeapExtractMax(NSMutableArray *heap, NSComparator comparator);
+
+void HeapIncreaseKey(NSMutableArray *heap, NSUInteger index, id newObject, NSComparator comparator);

@@ -92,3 +92,57 @@ void HeapSort(NSMutableArray *heap, NSComparator comparator)
 	}
 }
 
+id HeapMaximum(NSMutableArray *heap)
+{
+	if ([heap count] == 0)
+		return nil;
+	
+	return heap[0];
+}
+
+id HeapExtractMax(NSMutableArray *heap, NSComparator comparator)
+{
+	NSUInteger count = [heap count];
+	if (count == 0)
+		return nil;
+	
+	id max = heap[0];
+	
+	if (count > 1) {
+		heap[0] = heap[count-1];
+		[heap removeLastObject];
+		MaxHeapify(heap, 0, comparator);
+	}
+	else {
+		[heap removeObjectAtIndex:0];
+	}
+	
+	return max;
+}
+
+void HeapIncreaseKey(NSMutableArray *heap, NSUInteger index, id newObject, NSComparator comparator)
+{
+	id oldObject = heap[index];
+	NSComparisonResult result = comparator(oldObject, newObject);
+	assert(result == NSOrderedSame || result == NSOrderedAscending);
+	
+	heap[index] = newObject;
+	if (result == NSOrderedSame)
+		return;
+	
+	while (index > 0) {
+		NSUInteger parentIndex = ParentOf(index);
+		id object = heap[parentIndex];
+		if (comparator(newObject, object) == NSOrderedDescending) {
+			id temp = heap[index];
+			heap[index] = heap[parentIndex];
+			heap[parentIndex] = temp;
+			
+			index = parentIndex;
+		}
+		else {
+			break;
+		}
+	}
+}
+
