@@ -10,11 +10,23 @@
 
 NSMutableArray *ArrayWithIntArray(NSInteger intArray[], NSUInteger count)
 {
-	assert(count > 0);
+	NSCParameterAssert(count > 0);
 	NSMutableArray *array = [[NSMutableArray alloc] init];
 	for (NSUInteger i = 0; i < count; ++i) {
 		[array addObject:@(intArray[i])];
 	}
+	return array;
+}
+
+NSMutableArray *AKNumberArrayInBetween(NSInteger min, NSInteger max)
+{
+	NSInteger delta = (min < max) ? 1 : -1;
+	NSMutableArray *array = [[NSMutableArray alloc] init];
+	while (min != max) {
+		[array addObject:@(min)];
+		min+=delta;
+	}
+	[array addObject:@(max)];
 	return array;
 }
 

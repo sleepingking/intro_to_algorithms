@@ -25,9 +25,10 @@ static inline NSUInteger RightOf(NSUInteger index) {
 
 void _MaxHeapify(NSMutableArray *heap, NSUInteger heapSize, NSUInteger i, NSComparator comparator)
 {
-	assert(heapSize > i);
-	assert(comparator != nil);
+	NSCAssert(heapSize > i, @"");
+	NSCAssert(comparator != nil, @"");
 	
+	// compare the current node with its left and right child, to see which one is the largest
 	NSUInteger largestIndex = i;
 	
 	NSUInteger leftIndex = LeftOf(i);
@@ -45,9 +46,8 @@ void _MaxHeapify(NSMutableArray *heap, NSUInteger heapSize, NSUInteger i, NSComp
 	}
 	
 	if (largestIndex != i) {
-		id temp = heap[i];
-		heap[i] = heap[largestIndex];
-		heap[largestIndex] = temp;
+		// exchange it with the largest one
+		[heap exchangeObjectAtIndex:i withObjectAtIndex:largestIndex];
 		
 		// "flow-down"
 		_MaxHeapify(heap, heapSize, largestIndex, comparator);
@@ -61,7 +61,7 @@ void MaxHeapify(NSMutableArray *heap, NSUInteger i, NSComparator comparator)
 
 void BuildMaxHeap(NSMutableArray *heap, NSComparator comparator)
 {
-	assert(comparator != nil);
+	NSCAssert(comparator != nil, @"");
 	NSUInteger heapSize = [heap count];
 	if (heapSize <= 1)
 		return;
@@ -83,9 +83,7 @@ void HeapSort(NSMutableArray *heap, NSComparator comparator)
 	NSUInteger heapSize = [heap count];
 	
 	for (NSUInteger i = count-1; i >= 1; --i) {
-		id temp = heap[0];
-		heap[0] = heap[i];
-		heap[i] = temp;
+		[heap exchangeObjectAtIndex:0 withObjectAtIndex:i];
 		
 		heapSize--;
 		_MaxHeapify(heap, heapSize, 0, comparator);
@@ -109,9 +107,9 @@ id HeapExtractMax(NSMutableArray *heap, NSComparator comparator)
 	id max = heap[0];
 	
 	if (count > 1) {
-		heap[0] = heap[count-1];
+		heap[0] = heap[count-1];			// use the last one (a leaf) as the root
 		[heap removeLastObject];
-		MaxHeapify(heap, 0, comparator);
+		MaxHeapify(heap, 0, comparator);	// re-heapify
 	}
 	else {
 		[heap removeObjectAtIndex:0];
@@ -124,19 +122,18 @@ void HeapIncreaseKey(NSMutableArray *heap, NSUInteger index, id newObject, NSCom
 {
 	id oldObject = heap[index];
 	NSComparisonResult result = comparator(oldObject, newObject);
-	assert(result == NSOrderedSame || result == NSOrderedAscending);
+	NSCAssert(result == NSOrderedSame || result == NSOrderedAscending, @"");
 	
 	heap[index] = newObject;
 	if (result == NSOrderedSame)
 		return;
 	
 	while (index > 0) {
+		// "flow up"
 		NSUInteger parentIndex = ParentOf(index);
 		id object = heap[parentIndex];
 		if (comparator(newObject, object) == NSOrderedDescending) {
-			id temp = heap[index];
-			heap[index] = heap[parentIndex];
-			heap[parentIndex] = temp;
+			[heap exchangeObjectAtIndex:index withObjectAtIndex:parentIndex];
 			
 			index = parentIndex;
 		}
@@ -144,5 +141,21 @@ void HeapIncreaseKey(NSMutableArray *heap, NSUInteger index, id newObject, NSCom
 			break;
 		}
 	}
+}
+
+BOOL IsMaxHeap(NSMutableArray *heap, NSComparator comparator)
+{
+	NSCParameterAssert(comparator != nil);
+	NSUInteger i = 0;
+	for (id obj in heap) {
+		NSUInteger parentIndex = ParentOf(i);
+		if (parentIndex != NSNotFound) {
+			id parent = heap[parentIndex];
+			if (comparator(parent, obj) == NSOrderedAscending)
+				return NO;
+		}
+		++i;
+	}
+	return YES;
 }
 

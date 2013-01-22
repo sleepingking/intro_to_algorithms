@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4762DF16A7BC1B00F99D9E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55516A6934B00CF7771 /* SenTestingKit.framework */; };
+		DD4762E016A7BC1B00F99D9E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55716A6934B00CF7771 /* Cocoa.framework */; };
+		DD4762E616A7BC1B00F99D9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD4762E416A7BC1B00F99D9E /* InfoPlist.strings */; };
+		DD4762E916A7BC1B00F99D9E /* QuickSort_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4762E816A7BC1B00F99D9E /* QuickSort_Test.m */; };
+		DD4762F216A7BC4000F99D9E /* QuickSort.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4762F116A7BC4000F99D9E /* QuickSort.m */; };
+		DD4762F316A7C08300F99D9E /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8AA56C16A693AE00CF7771 /* Common.m */; };
+		DD4762F616ACC2F500F99D9E /* AKPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = DD4762F516ACC2F500F99D9E /* AKPriorityQueue.m */; };
 		DD8AA55616A6934B00CF7771 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55516A6934B00CF7771 /* SenTestingKit.framework */; };
 		DD8AA55816A6934B00CF7771 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8AA55716A6934B00CF7771 /* Cocoa.framework */; };
 		DD8AA56216A6934B00CF7771 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD8AA56016A6934B00CF7771 /* InfoPlist.strings */; };
@@ -16,6 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD4762DE16A7BC1B00F99D9E /* QuickSort_Test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickSort_Test.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4762E316A7BC1B00F99D9E /* QuickSort_Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickSort_Test-Info.plist"; sourceTree = "<group>"; };
+		DD4762E516A7BC1B00F99D9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD4762E716A7BC1B00F99D9E /* QuickSort_Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickSort_Test.h; sourceTree = "<group>"; };
+		DD4762E816A7BC1B00F99D9E /* QuickSort_Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickSort_Test.m; sourceTree = "<group>"; };
+		DD4762EA16A7BC1B00F99D9E /* QuickSort_Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickSort_Test-Prefix.pch"; sourceTree = "<group>"; };
+		DD4762F016A7BC4000F99D9E /* QuickSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickSort.h; sourceTree = "<group>"; };
+		DD4762F116A7BC4000F99D9E /* QuickSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickSort.m; sourceTree = "<group>"; };
+		DD4762F416ACC2F500F99D9E /* AKPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKPriorityQueue.h; sourceTree = "<group>"; };
+		DD4762F516ACC2F500F99D9E /* AKPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKPriorityQueue.m; sourceTree = "<group>"; };
 		DD8AA52616A68C8B00CF7771 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD8AA53F16A68C9F00CF7771 /* Heap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Heap-Prefix.pch"; sourceTree = "<group>"; };
 		DD8AA54016A68C9F00CF7771 /* Heap.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Heap.1; sourceTree = "<group>"; };
@@ -39,6 +56,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD4762DA16A7BC1B00F99D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4762DF16A7BC1B00F99D9E /* SenTestingKit.framework in Frameworks */,
+				DD4762E016A7BC1B00F99D9E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8AA55016A6934B00CF7771 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,12 +77,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4762E116A7BC1B00F99D9E /* QuickSort_Test */ = {
+			isa = PBXGroup;
+			children = (
+				DD4762E716A7BC1B00F99D9E /* QuickSort_Test.h */,
+				DD4762E816A7BC1B00F99D9E /* QuickSort_Test.m */,
+				DD4762E216A7BC1B00F99D9E /* Supporting Files */,
+			);
+			path = QuickSort_Test;
+			sourceTree = "<group>";
+		};
+		DD4762E216A7BC1B00F99D9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD4762E316A7BC1B00F99D9E /* QuickSort_Test-Info.plist */,
+				DD4762E416A7BC1B00F99D9E /* InfoPlist.strings */,
+				DD4762EA16A7BC1B00F99D9E /* QuickSort_Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD4762EF16A7BC3200F99D9E /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				DD4762F016A7BC4000F99D9E /* QuickSort.h */,
+				DD4762F116A7BC4000F99D9E /* QuickSort.m */,
+			);
+			path = QuickSort;
+			sourceTree = "<group>";
+		};
 		DD8AA51716A68C8B00CF7771 = {
 			isa = PBXGroup;
 			children = (
 				DD8AA54816A68CE700CF7771 /* Common */,
+				DD4762EF16A7BC3200F99D9E /* QuickSort */,
 				DD8AA53B16A68C9F00CF7771 /* Heap */,
 				DD8AA55D16A6934B00CF7771 /* HeapSort_Test */,
+				DD4762E116A7BC1B00F99D9E /* QuickSort_Test */,
 				DD8AA52516A68C8B00CF7771 /* Frameworks */,
 				DD8AA52316A68C8B00CF7771 /* Products */,
 			);
@@ -66,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DD8AA55416A6934B00CF7771 /* HeapSort_Test.octest */,
+				DD4762DE16A7BC1B00F99D9E /* QuickSort_Test.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +142,8 @@
 		DD8AA53B16A68C9F00CF7771 /* Heap */ = {
 			isa = PBXGroup;
 			children = (
+				DD4762F416ACC2F500F99D9E /* AKPriorityQueue.h */,
+				DD4762F516ACC2F500F99D9E /* AKPriorityQueue.m */,
 				DD8AA54C16A68D2100CF7771 /* HeapSort.h */,
 				DD8AA54D16A68D2100CF7771 /* HeapSort.m */,
 				DD8AA54016A68C9F00CF7771 /* Heap.1 */,
@@ -144,6 +204,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DD4762DD16A7BC1B00F99D9E /* QuickSort_Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4762ED16A7BC1B00F99D9E /* Build configuration list for PBXNativeTarget "QuickSort_Test" */;
+			buildPhases = (
+				DD4762D916A7BC1B00F99D9E /* Sources */,
+				DD4762DA16A7BC1B00F99D9E /* Frameworks */,
+				DD4762DB16A7BC1B00F99D9E /* Resources */,
+				DD4762DC16A7BC1B00F99D9E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickSort_Test;
+			productName = QuickSort_Test;
+			productReference = DD4762DE16A7BC1B00F99D9E /* QuickSort_Test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		DD8AA55316A6934B00CF7771 /* HeapSort_Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD8AA56716A6934B00CF7771 /* Build configuration list for PBXNativeTarget "HeapSort_Test" */;
@@ -184,11 +262,20 @@
 			projectRoot = "";
 			targets = (
 				DD8AA55316A6934B00CF7771 /* HeapSort_Test */,
+				DD4762DD16A7BC1B00F99D9E /* QuickSort_Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DD4762DB16A7BC1B00F99D9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4762E616A7BC1B00F99D9E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8AA55116A6934B00CF7771 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +287,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		DD4762DC16A7BC1B00F99D9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		DD8AA55216A6934B00CF7771 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +316,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DD4762D916A7BC1B00F99D9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4762E916A7BC1B00F99D9E /* QuickSort_Test.m in Sources */,
+				DD4762F216A7BC4000F99D9E /* QuickSort.m in Sources */,
+				DD4762F316A7C08300F99D9E /* Common.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD8AA54F16A6934B00CF7771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,12 +333,21 @@
 				DD8AA56516A6934B00CF7771 /* HeapSort_Test.m in Sources */,
 				DD8AA56A16A6935400CF7771 /* HeapSort.m in Sources */,
 				DD8AA56D16A693AE00CF7771 /* Common.m in Sources */,
+				DD4762F616ACC2F500F99D9E /* AKPriorityQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DD4762E416A7BC1B00F99D9E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD4762E516A7BC1B00F99D9E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DD8AA56016A6934B00CF7771 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -240,6 +359,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DD4762EB16A7BC1B00F99D9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickSort_Test/QuickSort_Test-Prefix.pch";
+				INFOPLIST_FILE = "QuickSort_Test/QuickSort_Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DD4762EC16A7BC1B00F99D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickSort_Test/QuickSort_Test-Prefix.pch";
+				INFOPLIST_FILE = "QuickSort_Test/QuickSort_Test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		DD8AA52F16A68C8C00CF7771 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +467,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD4762ED16A7BC1B00F99D9E /* Build configuration list for PBXNativeTarget "QuickSort_Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4762EB16A7BC1B00F99D9E /* Debug */,
+				DD4762EC16A7BC1B00F99D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DD8AA51C16A68C8B00CF7771 /* Build configuration list for PBXProject "Introduction to Algorithm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -338,6 +491,7 @@
 				DD8AA56916A6934B00CF7771 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

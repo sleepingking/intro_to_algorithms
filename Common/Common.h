@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 NSMutableArray *ArrayWithIntArray(NSInteger intArray[], NSUInteger count);
+NSMutableArray *AKNumberArrayInBetween(NSInteger min, NSInteger max);

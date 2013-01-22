@@ -89,4 +89,58 @@
 	STAssertEqualObjects(inputArray, expectedArray, @"BuildMaxHeap doesn't work");
 }
 
+- (void)testHeapMax
+{
+	NSInteger input[] = {16,14,10,8,7,9,3,2,4,1};
+	int size = sizeof(input)/sizeof(NSInteger);
+	NSMutableArray *maxHeap = ArrayWithIntArray(input, size);
+	NSComparator comparator = ^(NSNumber *a, NSNumber *b) {
+		return [a compare:b];
+	};
+	
+	STAssertEqualObjects(@16, HeapMaximum(maxHeap), @"");
+	
+	STAssertEqualObjects(@16, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@14, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@10, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@9, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@8, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@7, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@4, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@3, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@2, HeapExtractMax(maxHeap, comparator), @"");
+	STAssertEqualObjects(@1, HeapExtractMax(maxHeap, comparator), @"");
+}
+
+- (void)testHeapIncreaseKey
+{
+	NSMutableArray *maxHeap = AKNumberArrayInBetween(5,1);
+	NSMutableArray *expected = AKNumberArrayInBetween(5,1);
+	NSComparator comparator = ^(NSNumber *a, NSNumber *b) {
+		return [a compare:b];
+	};
+	
+	HeapIncreaseKey(maxHeap, 0, @6, comparator);
+	expected[0] = @6;
+	STAssertEqualObjects(maxHeap, expected, @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @7, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @8, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @9, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @10, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @11, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+	
+	HeapIncreaseKey(maxHeap, 4, @12, comparator);
+	STAssertTrue(IsMaxHeap(maxHeap, comparator), @"");
+}
+
 @end
