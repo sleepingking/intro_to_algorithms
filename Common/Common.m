@@ -8,13 +8,22 @@
 
 #import "Common.h"
 
-NSMutableArray *ArrayWithIntArray(NSInteger intArray[], NSUInteger count)
+const int AK_NUMBER_SENTINEL = INT_MAX;
+
+NSMutableArray *AKNumberArrayWithInts(int firstNumber, ...)
 {
-	NSCParameterAssert(count > 0);
 	NSMutableArray *array = [[NSMutableArray alloc] init];
-	for (NSUInteger i = 0; i < count; ++i) {
-		[array addObject:@(intArray[i])];
+	
+	va_list args;
+	va_start(args, firstNumber);
+	
+	int number = firstNumber;
+	while (number != AK_NUMBER_SENTINEL) {
+		[array addObject:@(number)];
+		number = va_arg(args, int);
 	}
+	va_end(args);
+	
 	return array;
 }
 
@@ -29,4 +38,3 @@ NSMutableArray *AKNumberArrayInBetween(NSInteger min, NSInteger max)
 	[array addObject:@(max)];
 	return array;
 }
-

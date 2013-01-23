@@ -61,11 +61,8 @@
 
 - (void)testBuildMaxHeap
 {
-	NSInteger input[] = {4,1,3,2,16,9,10,14,8,7};
-	NSMutableArray *inputArray = ArrayWithIntArray(input, sizeof(input)/sizeof(NSInteger));
-	
-	NSInteger expected[] = {16,14,10,8,7,9,3,2,4,1};
-	NSMutableArray *expectedArray = ArrayWithIntArray(expected, sizeof(expected)/sizeof(NSInteger));
+	NSMutableArray *inputArray = AKNumberArrayWithInts(4,1,3,2,16,9,10,14,8,7, AK_NUMBER_SENTINEL);
+	NSMutableArray *expectedArray = AKNumberArrayWithInts(16,14,10,8,7,9,3,2,4,1, AK_NUMBER_SENTINEL);
 	
 	BuildMaxHeap(inputArray, ^(NSNumber *a, NSNumber *b) {
 		return [a compare:b];
@@ -76,11 +73,8 @@
 
 - (void)testHeapSort
 {
-	NSInteger input[] = {4,1,3,2,16,9,10,14,8,7};
-	NSMutableArray *inputArray = ArrayWithIntArray(input, sizeof(input)/sizeof(NSInteger));
-	
-	NSInteger expected[] = {1,2,3,4,7,8,9,10,14,16};
-	NSMutableArray *expectedArray = ArrayWithIntArray(expected, sizeof(expected)/sizeof(NSInteger));
+	NSMutableArray *inputArray = AKNumberArrayWithInts(4,1,3,2,16,9,10,14,8,7, AK_NUMBER_SENTINEL);
+	NSMutableArray *expectedArray = AKNumberArrayWithInts(1,2,3,4,7,8,9,10,14,16, AK_NUMBER_SENTINEL);
 	
 	HeapSort(inputArray, ^(NSNumber *a, NSNumber *b) {
 		return [a compare:b];
@@ -91,9 +85,7 @@
 
 - (void)testHeapMax
 {
-	NSInteger input[] = {16,14,10,8,7,9,3,2,4,1};
-	int size = sizeof(input)/sizeof(NSInteger);
-	NSMutableArray *maxHeap = ArrayWithIntArray(input, size);
+	NSMutableArray *maxHeap = AKNumberArrayWithInts(16,14,10,8,7,9,3,2,4,1, AK_NUMBER_SENTINEL);
 	NSComparator comparator = ^(NSNumber *a, NSNumber *b) {
 		return [a compare:b];
 	};

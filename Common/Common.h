@@ -8,5 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-NSMutableArray *ArrayWithIntArray(NSInteger intArray[], NSUInteger count);
+extern const int AK_NUMBER_SENTINEL;
+NSMutableArray *AKNumberArrayWithInts(int firstNumber, ...);
 NSMutableArray *AKNumberArrayInBetween(NSInteger min, NSInteger max);
